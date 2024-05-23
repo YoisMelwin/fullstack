@@ -1,20 +1,16 @@
-const express = require('express'),
-    path = require('path')
+const express = require('express')
+const path = require('path')
 const sqlite3 = require('sqlite3').verbose()
+const cors = require('cors')
 
 const app = express()
 
-//öppna anslutning till DB
-const db = new sqlite3.Database(path.resolve(__dirname, 'testk.sqlite'))
+app.use(cors()) // Lägg till detta
 
-/* app.get('/api', (_request, result) => {
-    result.send({ hello: 'world' })
-}) */
+const db = new sqlite3.Database(path.resolve(__dirname, 'fabrics.sqlite'))
 
-//endpoint för att hämta all data från databasen
-
-app.get('/cities', (_req, res) => {
-    db.all('SELECT * FROM cities', (err, rows) => {
+app.get('/products', (_req, res) => {
+    db.all('SELECT * FROM products', (err, rows) => {
         if (err) {
             console.error(err.message)
             res.status(500).send('Database error')
@@ -24,10 +20,11 @@ app.get('/cities', (_req, res) => {
     })
 })
 
-//Nedanför lägger vi flera endpoints.
-
-//Middelware för att läsa statiska filer med express från mappen dist
 app.use(express.static(path.join(path.resolve(), 'dist')))
+
+app.get('*', (_req, res) => {
+    res.sendFile(path.join(path.resolve(), 'dist', 'index.html'))
+})
 
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
