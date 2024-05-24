@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Col, Row } from 'react-bootstrap'
-import { ProductsItem } from '../components/ProductsItem'
+import ProductsItem from '../components/ProductsItem'
 
 interface Product {
     id: number
@@ -20,7 +20,6 @@ const Store = () => {
                 return response.json()
             })
             .then((data: Product[]) => {
-                console.log('Fetched products:', data)
                 setProducts(data)
             })
             .catch((error) => console.error('Error fetching products:', error))
@@ -28,7 +27,6 @@ const Store = () => {
 
     return (
         <>
-            <h1>Store</h1>
             <Row md={2} xs={1} lg={3} className="g-3">
                 {products.map((item) => (
                     <Col key={item.id}>

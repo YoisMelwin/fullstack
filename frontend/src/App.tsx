@@ -4,20 +4,29 @@ import { Container } from 'react-bootstrap'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Store from './pages/Store'
-import Navbar from './components/Navbar'
+import { Navbar } from './components/Navbar'
+import {Footer} from './components/Footer'
+
+import { ShoppingCartProvider } from './context/ShoppingCartContext'
+import { ProductsProvider } from './context/ProductsContext'
 
 function App() {
     return (
-        <Router>
-            <Navbar />
-            <Container className="mb-4">
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/store" element={<Store />} />
-                </Routes>
-            </Container>
-        </Router>
+        <ProductsProvider>
+            <ShoppingCartProvider>
+                <Router>
+                    <Navbar />
+                    <Container className="mb-4">
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route path="/login" element={<Login />} />
+                            <Route path="/store" element={<Store />} />
+                        </Routes>
+                    </Container>
+                    <Footer />
+                </Router>
+            </ShoppingCartProvider>
+        </ProductsProvider>
     )
 }
 
