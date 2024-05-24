@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import { Col, Row } from 'react-bootstrap'
+import { ProductsItem } from '../components/ProductsItem'
 
 interface Product {
     id: number
@@ -25,21 +27,16 @@ const Store = () => {
     }, [])
 
     return (
-        <div>
-            <h1>Produkter till min hemsida</h1>
-            <ul>
-                {products.map((product) => (
-                    <li key={product.id}>
-                        {product.name}: {product.price}
-                        <img
-                            src={product.imgUrl}
-                            alt={product.name}
-                            width="200"
-                        />
-                    </li>
+        <>
+            <h1>Store</h1>
+            <Row md={2} xs={1} lg={3} className="g-3">
+                {products.map((item) => (
+                    <Col key={item.id}>
+                        <ProductsItem {...item} />
+                    </Col>
                 ))}
-            </ul>
-        </div>
+            </Row>
+        </>
     )
 }
 
