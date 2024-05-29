@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom'
 import { useShoppingCart } from '../context/ShoppingCartContext'
 import React from 'react'
 
+// Navbar-komponent
+
 export function Navbar() {
     const { openCart, cartQuantity } = useShoppingCart()
     return (
@@ -26,9 +28,6 @@ export function Navbar() {
                     </Nav.Link>
                     <Nav.Link to="/store" as={NavLink}>
                         Store
-                    </Nav.Link>
-                    <Nav.Link to="/about" as={NavLink}>
-                        Login
                     </Nav.Link>
                 </Nav>
                 {cartQuantity > 0 && (

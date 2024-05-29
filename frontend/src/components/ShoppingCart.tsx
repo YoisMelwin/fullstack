@@ -4,9 +4,13 @@ import { CartItem } from './CartItem'
 import { useProducts } from '../context/ProductsContext'
 import React from 'react'
 
+// Typdefinition
+
 type ShoppingCartProps = {
     isOpen: boolean
 }
+
+// ShoppingCart-komponent
 
 export function ShoppingCart({ isOpen }: ShoppingCartProps) {
     const { closeCart, cartItems } = useShoppingCart()

@@ -3,7 +3,7 @@ import React, { createContext, useContext, useEffect, useState } from 'react'
 interface Product {
     id: number
     name: string
-    price: number // Säkerställ att priset är av typen nummer
+    price: number
     imgUrl: string
 }
 
@@ -37,7 +37,7 @@ export const ProductsProvider: React.FC<{ children: React.ReactNode }> = ({
                 return response.json()
             })
             .then((data: Product[]) => {
-                // Kontrollera att price är numeriskt om det är en sträng
+                // Kontrollerar att price är numeriskt om det är en sträng
                 const formattedData = data.map((product) => ({
                     ...product,
                     price:
