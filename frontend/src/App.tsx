@@ -24,7 +24,10 @@ function App() {
                         }}
                     >
                         <Container
-                            style={{ paddingBottom: '50px' }}
+                            style={{
+                                paddingBottom: '50px',
+                                paddingTop: '80px'
+                            }}
                             className="mb-4"
                         >
                             <Routes>
