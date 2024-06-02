@@ -26,9 +26,9 @@ export function Navbar() {
                     >
                         Textilhörnan
                     </Nav.Link>
-                    <Nav.Link to="/store" as={NavLink}>
+                    {/* <Nav.Link to="/store" as={NavLink}>
                         Store
-                    </Nav.Link>
+                    </Nav.Link> */}
                 </Nav>
                 {cartQuantity > 0 && (
                     <Button

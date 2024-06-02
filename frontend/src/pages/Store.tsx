@@ -9,6 +9,8 @@ interface Product {
     imgUrl: string
 }
 
+//Frontend fecth för att synliggöra databasens innehåll för store.
+
 const Store = () => {
     const [products, setProducts] = useState<Product[]>([])
     useEffect(() => {
