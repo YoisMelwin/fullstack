@@ -1,5 +1,5 @@
 // src/pages/Home.tsx
-// src/pages/Home.tsx
+
 import React from 'react'
 import Register from '../components/Register'
 

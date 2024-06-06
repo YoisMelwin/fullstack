@@ -26,6 +26,7 @@ export function Navbar() {
                     >
                         Textilhörnan
                     </Nav.Link>
+                    {/*För att dölja "store" från Navbar */}
                     {/* <Nav.Link to="/store" as={NavLink}>
                         Store
                     </Nav.Link> */}

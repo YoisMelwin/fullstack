@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <React.StrictMode>
+        {/* Renderar App-komponenten som är applikationens rotkomponent */}
         <App />
     </React.StrictMode>
 )

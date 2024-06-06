@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-// Importerar nödvändiga komponenter från React och React Bootstrap
+
 import { Container, Form, Button, Image } from 'react-bootstrap'
 // Importerar useNavigate från react-router-dom för navigering
 import { useNavigate } from 'react-router-dom'

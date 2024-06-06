@@ -24,7 +24,7 @@ function App() {
                     >
                         <Container
                             style={{
-                                paddingBottom: '5px'
+                                paddingBottom: '100px'
                             }}
                             className="mb-4"
                         >
