@@ -67,7 +67,7 @@ const Register: React.FC = () => {
                     {/* Inputfält för email */}
                     <Form.Control
                         type="email"
-                        placeholder="Enter email"
+                        placeholder="Email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     />
@@ -77,7 +77,7 @@ const Register: React.FC = () => {
                     {/* Inputfält för lösenord */}
                     <Form.Control
                         type="password"
-                        placeholder="Password"
+                        placeholder="Lösenord"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
@@ -93,7 +93,7 @@ const Register: React.FC = () => {
                         marginTop: '20px'
                     }}
                 >
-                    Submit
+                    Skicka
                 </Button>
                 {/* Visar meddelande om något fel inträffar */}
                 {message && <p>{message}</p>}

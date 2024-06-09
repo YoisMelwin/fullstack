@@ -45,7 +45,7 @@ const ProductsItem = ({ id, name, price, imgUrl }: StoreItemProps) => {
                                 margin: '0 auto'
                             }}
                         >
-                            + Add To Cart
+                            + Lägg i Kundvagn
                         </Button>
                     ) : (
                         <div
@@ -68,8 +68,7 @@ const ProductsItem = ({ id, name, price, imgUrl }: StoreItemProps) => {
                                     -
                                 </Button>
                                 <div>
-                                    <span className="fs-3">{quantity}</span> in
-                                    cart
+                                    <span className="fs-3">{quantity}</span>
                                 </div>
                                 <Button
                                     onClick={() => increaseCartQuantity(id)}
@@ -88,7 +87,7 @@ const ProductsItem = ({ id, name, price, imgUrl }: StoreItemProps) => {
                                 variant="dark"
                                 size="sm"
                             >
-                                Remove
+                                Ta bort
                             </Button>
                         </div>
                     )}

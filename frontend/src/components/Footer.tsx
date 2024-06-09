@@ -21,7 +21,7 @@ export function Footer() {
                                 color: '#494848'
                             }}
                         >
-                            About us
+                            Om oss
                         </NavLink>
                         <NavLink
                             to="/contact"
@@ -31,7 +31,7 @@ export function Footer() {
                                 color: '#494848'
                             }}
                         >
-                            Contact
+                            Kontakt
                         </NavLink>
                     </Col>
                 </Row>
